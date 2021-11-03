@@ -1,0 +1,61 @@
+data is generally a raw format of any information
+information is nothing but the data being viewed in a structured format
+Bit:
+The smallest/fundamental  unit of measurement used for measuring data is  a single bit
+1 Byte = 8 bits
+Database :
+it is the collection of related data ,organized in structured and meaningful way
+Founder of Oracle, Larry Ellison
+The databases in early systems were stored on tapes, which were read only format, which means once you store data.
+It is impossible to delete or update or even add any new data on it easily.
+DBMS:
+ it is a software that controls the different manipulation of stored or to be stored data in a db
+ A database management system perform the following –
+
+Database Definition
+Data Updation
+Data Retrieval
+Administration
+Security
+
+File System Vs DBMS:
+Earlier the data were stored in a file format where the data is stored in one file or set of files. 
+These files have no logical relation with one another and data is just thrown in them.
+With the user needing to remember the logical relationships between them on his own.
+
+Imagine, having multiple files, one for usernames, one for passwords, one for email ID, 
+and maybe 1000’s of such individual files.
+
+ROW NUM in SQL
+The rownum clause  in SQL is used to specify the number of tuples present in a database table
+Each tuple will be added a number starting from 1 to n so that the user can easily identify the number of tuple present in the table
+
+
+Single Tier Architecture:
+it is used for storing large data
+In such systems all the required components like – the interface, Middleware, and back-end data, all on one server or platform.
+
+Two Tier Architecture:
+In such systems, the communication is between the client and server
+Real-time examples for two-tier architecture 
+Desktop applications excel sheets, word document, desktop games
+It cannot be used for dynamic web applications where there are a large number of users and generally used for static desktop and small web applications.
+
+
+
+Three Tier Architecture:
+Database Tier – The raw data is present at this tier along with its DBMS system
+Application Tier – This acts as an intermediary between the database tier and the user.
+Presentation Tier – This also known as user tier. Here the user is able to view all the database results
+All large dynamic web applications  present over the internet are examples 
+
+The n tier is more customised format for corporation. Where there are n different divisions of the whole format which are related but independent of one another.
+
+
+
+Uses of DBMS:
+1.data retrival
+2.data redundancy
+3.data Security
+4.data integrity
+5.data indexing
