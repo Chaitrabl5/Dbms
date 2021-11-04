@@ -1,0 +1,102 @@
+Data Abstraction:
+Data abstraction refers to the hiding of details from users at certain levels,
+ for authentication and security purpose
+
+
+ Data Independence:
+These levels of abstraction provide data independence i.e is all the transactions or  changes made at
+one level are unaffected to other levels
+
+
+Types of Data Models in DBMS
+ 
+
+Hierarchical database model
+Relational model
+Network model
+Entity-relationship model
+Object-oriented database model
+Document model
+Entity-attribute-value model
+Star schema
+
+Entity – These are representation of a real world entities in code.
+Attributes – These are the characteristic properties of entities
+Relationship – Logical relationship between various entities involved in the Database creation.
+One to one
+One to many
+Many to one
+Many to many
+
+
+Hierarchical data model is being used from the 1960s onwards where data is organized like a tree structure
+
+Data Organisation in the network model is just like a graph rather than a tree, a child record can have any number of parent records
+
+ERmodel is an illustration of various entities in business and the relationship between them 
+It is built during the analysis phase of the system development life cycle 
+The ER model separates the information required in the business i.e it establishes a clear distinction between data that is useful and not useful for business operations 
+
+The basic idea between this relational data model is simple two-dimensional tables, also called relations which consist of rows and columns.
+Advantages of the relational model  
+Data integrity for accuracy and consistency 
+No data redundancy 
+Access control and integrity in the form of constraints which enables validation before entering and accessing the data 
+Provides high security 
+Supports to store any type any data types(numbers, characters, date, images, audios, text files )
+Data can be managed and used by several users at a time.
+Data can be shared across several platforms.
+
+Oracle 10g a most popularly used RDBMS is proven to be the fastest database for transaction processing including data warehousing and third-party application on several servers of all sizes.
+
+
+
+ object-oriented database stores complex data and relationships between data directly, without mapping any links to relational rows and columns.
+
+
+Data Hiding: Giving access to only required data at different levels of users
+ Inheritance: data reusability 
+Data security and integrity: Providing different levels of access to different levels of users using access modifiers, validations, authentication
+Polymorphism: Using the same object in different ways
+Encapsulation: Combining different data from different units into a consolidated one 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
