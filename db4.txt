@@ -1,0 +1,84 @@
+Keys in Relational Model:
+Keys ensure the data integrity and consistency and helps to access a record uniquely
+The relational Model has the following keys
+Primary Key
+Foreign Key
+Candidate Key
+Alternate Key
+Super Key
+
+Primary Key:
+ A primary key is a constraint  in a table which uniquely identifies each row record in a database table by enabling one or more the column in the table as primary key.
+
+Foreign Key:
+ The foreign key constraint is a column or list of columns which points to the primary key column of another table 
+The main purpose of the foreign key is only those values are allowed in the present table that will match to the primary key column of another table.
+
+Example to create a foreign key-
+Reference Table-
+CREATE TABLE CUSTOMERS1(
+   ID   INT ,            
+  NAME VARCHAR (20) ,
+  COURSE VARCHAR(10) ,
+   PRIMARY KEY (ID)
+); 
+ 
+Child Table-
+CREATE TABLE CUSTOMERS2(
+   ID   INT ,            
+   MARKS INT,     
+   FOREIGN KEY(ID) REFERENCES CUSTOMERS1(ID) ON DELETE CASCADE
+); 
+
+
+candidate key: Super key with no redundant attributes known as candidate key i.e should not
+ contain any column that contains duplicate data.
+
+Alternate Key:Alternate keys  are  columns present in the table which are not selected as primary keys but still, 
+they have all the capabilities to be used as a primary key is called alternate key.
+ID  is used as a primary key because no two  students will have the same Id
+phone attribute, no two  students will have same phone number
+
+
+Super Key:
+ A super key is a group of single or multiple keys which uniquely identifies rows in a table. 
+ A Super key may have additional attributes that are not needed for unique identification.
+{Id, phone, Name}
+{Id, Name}
+{Id, phone}
+[PHONE]: As no two students will have the same phone number, a phone number will help to uniquely 
+access the student details and hence phone number is a super key
+
+
+Composite key:
+If a single column alone fails to be served as a primary key then combination 
+ columns would help to uniquely access a record from table such type of keys or nothing but composite keys.
+
+Create table ORDER
+(
+    Customer_ID int ,
+    Product_ID int ,
+    Order_Quantity int ,
+    Primary key (Customer_ID, Product_ID)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
