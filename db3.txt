@@ -1,0 +1,81 @@
+Thus by programmers there were some additions in the ER model were suggested to reduce down on the complexity of the program, some new concepts were added which were –
+
+Generalisation
+Specialisation
+Aggregation
+
+In generalization we combine lower level entities to form a higher level entity. Thus its clear that it follows a bottom up approach.
+Example –
+In a bank there are two different types of accounts – Current and Savings, combine to form a super entity Account.
+
+Specialization is opposite to that, it follows a top down approach rather.
+Example –
+Employee may be decomposed to further as current employee entity and ex employee entity.
+
+Aggregation is simply when we would consider two different entities as a single entity together.
+Example –
+University offering course can be considered a same entity, when viewed from a student entity perspective.
+
+
+Relational Data Model:
+
+Relation: 
+Representing data in the form of a table consisting of rows and columns and relation both convey the same meaning 
+Student  is a relation which consists of student records.
+ 
+
+Schema:
+Schema is nothing but the organization of data in a table i.e in what order  the data is logically aligned 
+STUDENT relation can be represented as  STUDENT (STUD_ID, NAME, PHONE, STATE, STUD_AGE).
+ 
+
+Instance:
+Set of unique values present in the table at present is known as relational instance.
+ 
+
+Attribute:
+An attribute defines the properties of a table that means what type of data that a table is storing ,these are nothing but a view of data in the form of columns
+In the relation student STUD_ID, NAME, PHONE, STATE, STUD_AGE correspond to the attributes of the relation.
+ 
+
+Domain :
+A domain is nothing but the set of possible values that are allowed for a column in a database table 
+For example, the age column in the student table is allowed to have values between 21 -32.
+ 
+
+Tuple :
+It is nothing but the row of the database table
+The student relation is having 4 tuples or rows.
+ 
+
+Null values :
+There are certain situations where data may be unknown, missing or undefined which are represented by using this NULL
+A null value is different from zero and any operation on null value will result in null.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
