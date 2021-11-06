@@ -1,0 +1,57 @@
+Default clause in SQL is used to add default data to the columns
+NOT NULL Constraint :
+Not all constraints prevents a column to contain null values 
+Once not null is applied to a particular column, you cannot enter null values
+ to that column and restricted to maintain  only some proper value other than null 
+
+
+CREATE TABLE emp (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255) DEFAULT 'hyderabad'
+);
+
+Unique constraint ensures that all values in a column are unique 
+CREATE TABLE Persons (
+    ID int UNIQUE,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+); 
+
+Combination of not null and unique :
+    ID int NOT NULL UNIQUE 
+
+primary key will not accept null values where as unique key allows null values on the column 
+
+
+Check in DBMS :
+Check constraint ensures that the data entered by the user for that column is within the range of values or possible values specified.
+CREATE TABLE STUDENT (
+    ID int ,
+    Name varchar(255) ,
+    Age int,
+    CHECK (Age>=18)
+); 
+
+
+
+We have 5 types of key constraints in DBMS
+NOT NULL: ensures that the specified column doesn’t contain a NULL value.
+UNIQUE : provides a unique/distinct values to specified columns.
+DEFAULT: provides a default value to a column if none is specified.
+CHECK :checks for the predefined conditions before inserting the data inside the table.
+PRIMARY KEY: it uniquely identifies a row in a table.
+FOREIGN KEY: ensures referential integrity of the relationship
+
+
+Domain constraint ensures  two things 
+
+It makes sure that the data value entered for that particular column matches with the data type defined for that column 
+It shows that the constraints((NOT NULL / UNIQUE / PRIMARY KEY / FOREIGN KEY / CHECK / DEFAULT)) impose on that column not fulfilled or not 
+
+Domain Constraint = data type check for the column + Constraints (NOT NULL / UNIQUE / PRIMARY KEY / FOREIGN KEY / CHECK / DEFAULT)
+
+
