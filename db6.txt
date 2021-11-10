@@ -1,0 +1,63 @@
+Natural Join (⋈)
+JOIN operation also allows joining variously related tuples from different relations.
+Natural join can only be performed if there is a common attribute (column) between the relations.
+The name and type of the attribute must be same.
+
+Outer Join
+In an outer join, along with tuples that satisfy the matching criteria, we also include some or all tuples that do not match the criteria.
+There are three types of outer joins. They are
+Left Outer Join
+Right Outer Join
+Full Outer Join
+
+Left Outer Join(A  B)
+In the left outer join, the operation allows keeping all tuple in the left relation.
+If there is no matching tuple is found in the right relation, then the attributes of the right relation in the join results are filled with null values.
+
+Right Outer Join(A B)
+In the right outer join, the operation allows keeping all tuple in the right relation.
+If there is no matching tuple is found in the left relation, then the attributes of the left relation in the join results are filled with null values.
+
+
+Full Outer Join: ( A  B)
+In a full outer join, all tuples from both relations are included in the result, irrespective of the matching condition.
+
+
+Intersection (∩)
+An intersection is defined by the symbol ∩
+A ∩ B defines a relation consisting of a set of all tuple that is in both A and B. However, A and B must be union-compatible.
+
+
+
+ Functional Dependencies in DBMS.
+
+If one attribute is determined by another attribute in a DBMS system then it is a functional dependency
+Functional Dependency plays an important role to find the difference between good and bad database design.
+A functional dependency is denoted by an arrow →
+The functional dependency of A on B is represented by A →B
+
+Types of functional dependencies are
+Multivalued dependency
+Trivial functional dependency
+Non-trivial functional dependency
+Transitive dependency
+ 
+
+Rules of Functional Dependencies
+Reflexive rule :. If A is a set of attributes and B is subset of A, then A holds a value of B.
+Augmentation rule : When A -> B holds, and C is attribute set, then AC->BC also holds. That is adding attributes which do not change the basic dependencies.
+Transitivity rule : This rule is very much similar to the transitive rule in algebra if A->B holds and B->C holds, then A->C also holds. A->B is called as functionally that determines B.
+
+Advantages of Functional Dependency
+Functional Dependency avoids data redundancy. Therefore same data do not repeat at multiple locations in that database
+It helps you to maintain the quality of data in the database
+It helps you to define meanings and constraints of databases
+It helps you to identify bad designs
+It helps you to find the facts regarding the database design
+
+
+
+
+
+
+
