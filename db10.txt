@@ -1,0 +1,72 @@
+indexing and its Types:
+
+Indexing is defined as a data structure technique which allows you to quickly retrieve records from a database file.
+It is based on the same attributes on which the indices has been done.
+
+An index
+Takes a search key as input
+Efficiently returns a collection of matching records.
+An Index is a small table having only two columns.
+The first column comprises a copy of the primary or candidate key of a table.
+The second column contains a set of pointers for holding the address of the disk block where that specific key value stored.
+There are mainly 4 types of indexing methods
+Primary Indexing
+Secondary Indexing
+Cluster Indexing
+Multilevel Indexing
+
+
+
+A Predicate in DBMS is a condition expression which evaluates and results in boolean
+ value either true or false which enables decision making in retrieving and manipulating a record.
+
+A predicate  is a condition that is specified for:
+
+Filtering  the data using the WHERE clause,
+Pattern matching in LIKE operator,
+Specifying a set of list for  using   IN  operator,
+Manipulating a range of values using BETWEEN operator, etc
+
+The predicate in where clause
+select * from emp
+where [job='MANAGER'];
+
+The predicate in ‘IN’ clause
+It is used to specify a set of values and where manipulation is performed on all the values specified in the set and if any of the value that is present in the list matches with the values present in a table then it returns true and is operation is performed
+
+Example
+select empno,job,sal,hiredate 
+from emp
+where [ename in('SCOTT','FORD','SMITH','JONES')];
+
+Predicate in ‘BETWEEN CAUSE
+It is used to perform data comparison and manipulation over a range of values present in the database table
+
+Example
+select empno,job,sal,hiredate 
+from emp
+where [sal between 800 and 2900];
+
+
+The predicate in ‘LIKE ‘ clause
+The like operator is a pattern matching operator that returns those records that match with the specified data pattern
+
+Example
+select empno,ename,hiredate,sal,job
+from emp
+where [ename like 'S%'];
+
+
+Predicate  in ‘IS NULL’ clause
+All operations upon null values present in the table must be done using this is null operator, we cannot compare null value using the assignment operator(=)
+
+select * from emp
+where [comm is null]
+
+The predicate in NOT clause
+Not operator is  negation operator which is used along with like, between, is null, in operators, It performs the reverse action of all these operators
+
+Example
+select * from emp
+where [sal NOT between 800 and 2900 ];
+
