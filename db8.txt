@@ -1,0 +1,73 @@
+Joins in DBMS:
+Joints are used to retrieve data from multiple tables 
+i.e it is used for data merging
+
+Inner Join-
+Definition: The inner join returns only matching rows, here columns that are used in join condition must belong to the same type, when tables having common column then only we are allowed how to use inner join
+Inner join performance is very high compared to Oracle 8i equal join
+Inner Join Example:
+select ename,loc from
+emp
+join 
+dept
+on emp.deptno=dept.deptno
+where loc='CHICAGO';
+
+Left outer join-
+Definition: Left  join always returns all rows from the left table and matching rows from right side table and also returns null values in the place of nonmatching rows in another table
+
+Left join Example
+select rownum ,ename,loc from
+emp
+LEFT join 
+dept
+on emp.deptno=dept.deptno 
+where loc='DALLAS';
+
+Right outer join
+Definition: Right join always return all rows from right side table and matching rows from the left table and also returns null values in the place of nonmatching rows in another table
+
+Example for Right Outer join
+select rownum,ename,loc from
+emp
+RIGHT join 
+dept
+on emp.deptno=dept.deptno where loc!='CHICAGO' ;
+
+
+Full Outer join
+Definition: Full join returns all rows from both  tables because it is viewed as a union of a left, right and inner join, It also returns null values in the place of nonmatching rows tuples
+
+Full Outer join example
+select rownum,ename,loc,job,mgr from
+emp
+FULL OUTER JOIN 
+dept
+on emp.deptno=dept.deptno ;
+
+
+Natural join
+Natural Join also returns matching rows only, this join performance is very high compared to inner join Definition: In this join, you are not required to use join condition explicitly, in this case, resource tables must have a common column, based on this oracle server itself internal establishes join condition
+Natural Join Example
+select rownum,ename,loc from
+emp
+NATURAL join 
+dept
+where loc='CHICAGO';
+
+
+Cross join
+Definition: In this type of join data in each and, every row in  one table is added to all the rows in  another table
+Here cross product operation  performed
+
+Here we have 14 rows in emp table and 4 rows in dept table hence 14*4=56 records are displayed if the cross join is performed on these tables without condition specified
+
+Cross Join example
+select rownum,ename,sal,dname,loc from 
+emp 
+cross join
+dept
+where loc='CHICAGO';
+
+
+
