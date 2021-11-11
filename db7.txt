@@ -1,0 +1,68 @@
+Normalization in DBMS:
+
+Normalization is a process of breaking a table into two smaller ones that are free from insertion and deletion and update  problems
+We define Normalization as a  step-by-step process via which we reduce the complexity of a database.
+ The database may have a lot redundancies
+
+A lot of anomalies may be caused in a database because of various cause insertion, deletion and updation operation or concurrency errors.
+
+There are 6 different normalisation benchmarks used which are –
+
+1 NF (normal form)
+2 NF
+3 NF
+BCNF (Boyce-Codd Normal Form
+4NF
+5NF (not used anymore)
+6NF (not used anymore)
+
+1 Normal Form
+
+Prerequisite –
+
+The relation should not have any multivalued attribute at all in it. For example, 
+for Student table in the database (relation). In the phone number column there must only be one phone number (value).
+
+How to solve –
+
+Decompose the table into single values attributes. Either the second phone number must be deleted or it
+ can be decomposed into primary and secondary number.
+
+
+2NF in DBMS. The relation should be –
+
+Already 1NF
+No Non Prime attribute should be dependent on any candidate key element, which is called not having partial dependency.
+
+3NF:
+For a relation to be in 3NF form the following must hold true –
+
+Should be 2NF already
+There should not be any transitive dependency for non prime attributes
+StudentID -> State
+State -> Country
+ they form transitive dependency as they are of format A -> B and B -> C. Thus, this forms transitive dependency is not in 3NF.
+
+BCNF:
+The BCNF is the short for Boyce-Codd Normal Form the following are the conditions for a relation to be in BCNF form –
+
+Should be 3NF
+If every non-trivial functional dependency A –> B, A is a super key
+
+Definition of 4th Normal Form:
+The table is said to be  in 4th Normal Form it is it satisfies the following properties
+
+It should be in Boyce Codd normal form(BCNF)
+It is free from multivalued dependency.
+ 
+
+What is a multivalued dependency
+A Dependency A->B for a single value of  A  there exist multiple values of B, then search dependencies are called as a multivalued dependency
+
+Definition of 5-NF:
+A table is said to be in Fifth Normal Form if it satisfies the following properties
+
+If it is in fourth normal form and
+It should not have join dependency
+
+
