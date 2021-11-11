@@ -1,0 +1,53 @@
+Every process need some resource for its execution and these resources are  granted in sequential order
+First the process request some resource.
+ OS grants the resource to the process if it is available or else it places the request in the wait queue.
+The process uses it and releases on the completion so that it can be granted to another process
+Deadlock is a situation where two or more transactions are waiting indefinitely for each other to give up their locks.
+
+
+Mutual Exclusion 
+It implies if two processes cannot use the same resource at the same time.
+
+Hold and Wait 
+A process waits for some resources while holding another resource at the same time.
+
+No pre-emption 
+The process which once scheduled will be executed till the completion. No other process can be scheduled by the scheduler meanwhile.
+
+Circular Wait 
+All the processes must be waiting for the resources in a cyclic manner so that the last process is waiting for the resource which is being held by the first process.
+
+Deadlock avoidance 
+Whenever a database is stuck in a deadlock it’s better to abort the transactions that are resulting deadlock but this is a waste of resources and time
+
+ACID Properties in DBMS.
+
+A transaction is a single logical action which accesses and modify the contents of the database through reading and write operations
+For maintaining consistency of the database before and after a transaction, certain properties are followed called as acid properties.
+
+Atomicity (A) 
+ 
+
+An atomic transaction simply means that the transaction happens only if it is able to be completed and achieve its purpose or if not it doesn’t happen at all
+Atomicity defines that there are no transactions that occur partially hence the atomicity is also known as “all or nothing rule”.
+
+Consistency(C) 
+Integrity constraints (maintain certain rules to authenticate database) must be maintained to ensure your database is consistent before and after the transaction
+Consistency refers to the correctness of the database
+
+Isolation (I) 
+ 
+
+Isolation ensures that multiple transactions can occur at the same time provided each transaction is independent and shall not interfere in other transaction
+Changes in one particular transaction are visible to any other transaction until unless a particular change in the transaction is written to the memory.
+
+ Durability (D) 
+ 
+
+Durability ensures that once after the completion of the transaction execution the updates and modifications to the database are stored and return to a disc so that they can be used whenever a system failure occurs
+So that all the changes become permanent and stored in non-volatile memory so that any action can be referred and never lost
+
+
+What is the purpose of this ACID properties ?
+Provides a mechanism for correctness and consistency of a database system
+As a result, each transaction is independent, consistent to each other and all actions are stored properly and permanently and supports failure recovery.
