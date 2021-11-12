@@ -1,0 +1,99 @@
+Operators are used to perform some action on the operands(i.e input data) for performing comparisons and computations and filter the data as required.
+
+SQL mainly provides the following
+set of operators
+
+SQL Arithmetic Operators
+SQL Comparison Operators
+SQL Logical Operators
+SQL Special operators
+
+
+SQL Arithmetic operators
+SQL provides five basic arithmetic operators, assume if a =10, b=20.
+
++	a + b will give 30
+–	a – b will give -10
+*	a * b will give 200
+/	b / a will give 2
+%	b % a will give 0
+select empno,ename,sal,sal*12 as annsal,sal/12 as comm
+from emp;
+
+SQL Bitwise operators
+Bitwise operators apply true false conditions on the individual binary bits of numbers
+
+Bitwise AND(&): Returns true you only are both input bits are true otherwise false
+Bitwise OR(|): Returns true if either of the input bits is true otherwise false
+Bitwise XOR(^): Returns true only if both the input bits are different
+ 
+
+SQL comparison(Relational)  operators
+Comparison operators are generally used along with where clause for filtering the data as per the required condition specified
+
+Assume variable a holds 10 and variable b holds 20 then
+
+Operator	Example
+=	(a = b) is not true.
+!=	(a != b) is true.
+>	(a > b) is not true.
+<	(a < b) is true.
+>=	(a >= b) is not true.
+<=	(a <= b) is true.
+!<	(a !< b) is false.
+!>	(a !> b) is true.
+Example
+select empno,ename,sal,job
+from emp
+where sal>2500;
+
+SQL Logical operators
+AND operator
+The AND results true only when all the conjunction of conditions specified after the where clause are satisfied
+
+Example
+
+select * from emp
+where job='MANAGER' AND sal>2500;
+
+OR operator
+Among multiple conditions specified in the where clause  the transaction is performed if any of the condition becomes true
+
+Example
+select * from emp
+where JOB='ANALYST' OR JOB='MANAGER';
+
+SQL Special Operators
+IN operator
+It is used to specify a set of values and operation n is performed on all the values specified in the set and if any of the value that is present in the list matches with the values present in a table then it returns true and is operation is performed
+
+Example
+select empno,job,sal,hiredate from emp
+where ename in('SCOTT','FORD','SMITH','JONES')
+
+BETWEEN Operator
+It is used to perform data comparison and manipulation over a range of values present in the database table
+
+Example
+select empno,job,sal,hiredate 
+from emp
+where sal between 800 and 2900;
+
+LIKE  operator
+The like operator is a pattern matching operator and returns those records that match the specified pattern
+
+Example
+select empno,ename,hiredate,sal,job
+from emp
+where ename like 'S%';
+
+IS NULL operator
+All operations upon null values present in the table must be done using this ‘is null’ operator .we cannot compare null value using the assignment operator
+
+Example
+select * from emp
+where comm is null
+
+
+
+
