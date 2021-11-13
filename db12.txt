@@ -1,0 +1,74 @@
+SQL Expressions in DBMS
+An expression is a combination of data, operators and other functions  which finally computes to obtain a value
+
+Basic Syntax for SQL expressions usage
+SELECT column1, column2, columnN 
+FROM table_name 
+WHERE [CONDITION|EXPRESSION];
+
+Boolean Expressions
+Boolean expressions generally correspond to a condition specified in the where clause for retrieving the required set of data
+Whenever the data you specified in the expression is matched with the data in the table then the expression evaluates to true and the record is obtained
+Syntax
+SELECT column1, column2, columnN 
+FROM table_name 
+WHERE SINGLE VALUE MATCHING EXPRESSION;
+
+select empno,ename,job,deptno,sal
+from emp
+where deptno=20;
+
+Numeric expression
+These expressions are  used to perform arithmetical calculations on the data present in the table
+
+Syntax
+SELECT numerical_expression as OPERATION_NAME
+[FROM table_name
+WHERE CONDITION] ;
+Example
+select ename,job,sal,sal*12 as annualsalary ,sal/4 as bonus from emp;
+
+Date expression
+Date expression performs manipulation on ‘date data type ‘values
+It is also used to return the current system, date timestamp and arithmetic operations on date values
+Example
+SELECT CURRENT_TIMESTAMP,sysdate from dual;
+
+
+CREATE TABLE
+Create command is used to create a table in the database with the structure specified by the user
+This structure includes the number of columns to be present in the table and the data type of the column, size of data, etc
+Basic Syntax for CREATE
+CREATE TABLE table_name
+(
+column1 datatype(size),
+column2 datatype(size),
+column3 datatype(size),
+.....
+columnN datatype(size),
+PRIMARY KEY( one or more columns )
+);
+Example
+create table emp( 
+empno number(4,0), 
+ename varchar2(10), 
+job varchar2(9), 
+mgr number(4,0), 
+hiredate date, 
+sal number(7,2), 
+deptno number(2,0) 
+PRIMARY KEY (ID)
+);
+
+Creating a new table from an existing table
+We can create a new table with exactly the same structure of any of the existing tables
+Here an empty table with exactly the same structure of the existing table is created but data and constraints of the table are not copied
+Example
+create table
+sample as (select * from emp);
+
+
+
+
+
+
