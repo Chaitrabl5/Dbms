@@ -1,0 +1,68 @@
+ALTER (ADD, DROP, MODIFY, RENAME)
+Alter command in SQL is used to make modifications to the columns in the existing table
+It is used to add columns, delete columns, drop constraints, renaming the columns, changing 
+the data type and data type size of the column existing in the table.
+
+ALTER Command: ADD 
+ADD command is used to add one or more new columns to the existing database tables
+The newly added columns will be empty and data can be entered by using insert command
+Syntax 
+ALTER TABLE table_name ADD(column_name datatype);
+Adding a single column 
+ALTER TABLE student ADD(address VARCHAR(100));
+The above query will create a new column in the student table named address with varchar data type where  each value in the address column can hold a maximum length of 200 characters
+
+Adding multiple columns 
+Any number of columns can be added to the existing table by using add command separated with commas
+
+ALTER TABLE student ADD (
+father name VARCHAR(60),
+mother name VARCHAR(60),
+DOB DATE);
+Adding constraints 
+We can add constraints like a primary key, foreign key to the existing table anytime
+
+ALTER TABLE Persons
+ADD PRIMARY KEY (ID);
+Now the ID column will become the primary key of the table
+
+Adding a column with a default value 
+We can add a column to an existing table by applying the default clause
+
+ALTER TABLE student ADD(
+gender char(1) default 'M'
+);
+A new column will be created with the name gender of char data type where all the values in that column will be by default ‘M’ which can also be customized using insert command.
+
+ 
+
+ALTER command: MODIFY 
+By using the modify command, we can change the data type of the existing column or the size of the data type of the existing column
+
+Syntax 
+ALTER TABLE table_name MODIFY (
+column_name datatype
+);
+Modifying a single column 
+ALTER TABLE student MODIFY(
+address varchar(75));
+The above query changes the data type of the address column as varchar and size to 75 overriding the existing size value and data type
+
+Modifying multiple columns
+We can change data types or sizes of the columns of multiple columns at a time separating with commas
+
+ALTER TABLE student MODIFY(
+address varchar(75),dob date);
+
+
+
+
+
+
+
+
+
+
+
+
+
