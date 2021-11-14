@@ -1,0 +1,92 @@
+LIKE  operator
+
+If you want to search all employees starting with letter P or names of all products which which consists of exactly 4 letters etc
+LIKE  in DBMS operator used to search specified pattern in the data and retrieve the record when there is a pattern match as required
+
+General Syntax for LIKE:
+SELECT column1, column2, ...
+FROM table_name
+WHERE column LIKE pattern;
+Wildcard operators
+% : Percent(%)represents 0,1 or multiple characters
+_   : Underscore(_) is used to match exactly a single character
+
+
+ORDER BY in DBMS
+The order by clause is used to arrange the fetched data from the database table in ascending or descending order of data values based on one or more columns
+
+Syntax
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+ASC: Displays data based on increasing order of values in the column
+DESC: Displays data based on decreasing order of values in the column
+
+select ename ,sal*12 annsal ,job,hiredate
+from emp
+order by annsal desc;
+
+Group by clause in SQL used to arrange logically related data into groups with
+ help of some functions i.e  if a particular column has the same type of data in 
+ different rows then they can be organized this into a logical groups.
+
+General Syntax for GROUP BY in DBMS
+SELECT column_name(s),function(column_name)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+
+Using  WHERE  clause in the GROUP BY
+Using where clause  rows  can be pre excluded before dividing them into groups, where clause  must be specified before the  group by clause  when it is used in the query
+
+Example
+select deptno,max(sal)
+from emp
+where deptno!=30
+group by deptno;
+
+Using ORDER BY with GROUP BY
+We can also display the rows in sorted order after logical organizing into groups using order by clause along with group by clause
+
+Example
+select deptno,max(sal) 
+from emp
+group by deptno
+order by deptno;
+
+HAVING  clause
+Having Clause is used to place conditions and decide which group will be part of the final result
+You cannot use aggregate functions like sum() count() etc with  where clause
+Hence we need to use having clause if you want to specify conditions using this aggregate functions
+Example
+SELECT ename , SUM(sal) FROM emp
+GROUP BY ename
+HAVING SUM(sal)>2000;
+
+Displaying top N rows
+Suppose if you want to display the top three rows present in emp table then you can use this rownum along with the relational operator
+
+Example
+select rownum,empno,ename,job,sal,deptno 
+FROM EMP
+where rownum<=3;
+
+TRUNCATE command
+The truncate command will make the table empty i.e all the table data will be deleted but the structure and database object is still alive and the table can be reused normally
+The truncate command logically nothing but using delete command for deleting the records in the table without specifying the where condition i.e all the rows get deleted in that case
+Syntax
+TRUNCATE TABLE table_name;
+
+Dropping a table using DROP in DBMS
+Drop command delete the table existence completely i.e drop statement destroys the existing database object of that particular table, index or view
+After dropping a table if you try to use the table then compiler shows an error as ” table or view does not exist“
+Syntax
+DROP TABLE table_name;
+
+Restoring a dropped table using FLASHBACK Command
+Before Oracle 10g whenever we use a drop command the table is permanently deleted but from Oracle 10g onwards we can get back the table from recycle bin by using flashback command.
+
+Syntax
+flashback table table_ name to before drop
+
