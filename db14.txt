@@ -1,0 +1,71 @@
+Alter command: Rename 
+Rename command in combination alter is used to rename the existing column name of a table
+
+ Syntax
+ALTER TABLE table_name RENAME
+old_column_name TO new_column_name;
+Example
+ALTER TABLE student RENAME
+address to location;
+ Column address has been renamed to location
+ Now all manipulations on this column must be performed using the new name location.
+ 
+
+ALTER command: DROP
+Alter command is used to delete one or more existing columns present in the table
+We can also drop more than one column by separating the column names with commas
+Syntax 
+ALTER TABLE table_name DROP(
+column_name);
+Dropping a single column 
+ALTER TABLE student DROP(
+address);
+Address column will be removed from the student table
+
+Dropping multiple columns 
+We can also drop more than one column by separating the column names with commas
+
+ALTER TABLE student DROP(
+   Caste, religion);
+
+Dropping constraints 
+Drop command is used to remove the constraints imposed on the columns
+
+ALTER TABLE emp
+DROP CONSTRAINT PK_id;
+
+SELECT Query in DBMS:
+A SELECT  query is used to retrieve data(records) from the table
+We can retrieve complete table data, or specific records by specifying conditions using the WHERE clause.
+Syntax 
+SELECT column1, column2, ...
+FROM table_name;
+
+Increase score of students by 5 marks who are having a score greater than 80
+SELECT stuid,sname,score,score+5 
+from student
+where score>80;
+
+A database is not permanent, User can make any changes to the database table by adding, deleting, updating existing records by using DML (data manipulation language ) command.
+
+INSERT  is a widely used data manipulation language(DML)command for adding new data to the existing database table
+Insert command is used to add one or more rows of data  to the database table with specified  column values
+Syntax for INSERT
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+Dynamic INSERT Query in DBMS (using ampersand &)
+In this type of insert, the values are entered by the user at the execution time
+
+Example
+insert into student values(&stuid,'&sname','&branch','&dob',&score);
+Action 
+
+enter value for stuid:73
+enter value for sname:Prashanth
+enter value for brance:Physics
+enter value for dob:17-08-1997
+enter value for score:78
+
+
+
