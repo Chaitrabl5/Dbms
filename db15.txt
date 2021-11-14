@@ -1,0 +1,68 @@
+WHERE  clause is used to specify a condition while retrieving and updating data from the database table and display only those
+ records in the table for which the condition specified in the where clause becomes true
+The WHERE clause is most commonly used with a select, update and delete  statements
+
+General Syntax for WHERE clause
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+AND clause
+Definition: The AND results true only when all the conjunction of conditions specified after the where clause are satisfied
+
+Syntax:
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 AND condition2 AND condition3 ...;
+
+OR clause
+Definition: Among multiple conditions specified in the where clause  the transaction is performed if any of the condition becomes true
+
+Syntax
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition1 OR condition2 OR condition3 ...
+
+Combining AND and OR
+In the where clause it is possible that a condition is specified as a conjunction of both AND  & OR 
+
+Syntax:
+SELECT * FROM table_name 
+WHERE condition1 AND|OR (condition2 AND|OR condition3....);
+
+
+he UPDATE  statement is used to modify or change the data of the existing table in the database
+We can update a single column as well as multiple columns as per our requirement
+The general syntax of UPDATE
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+The SET  is Is used to set new values to the required column and the where Clause is used to filter
+ the rows for which rows of data are needed to be updated
+
+DELETE statement is used to delete  single or multiple records present in the existing database table based on a specific condition
+
+Basic Syntax for the DELETE  statement
+DELETE FROM table_name
+WHERE condition;
+
+DELETE V/S TRUNCATE
+Both these commands delete and truncate  make a table empty but there are certain differences where a super learner must be aware of
+TRUNCATE command usage
+truncate table emp;
+It removes all rows from a Table and makes a table empty
+This operation cannot be rolled back (table cannot be restored) and no triggers will be fired
+You cannot use a where clause and delete particular records you need to delete enter table data
+Truncate is faster and does not use a match under space as delete
+DELETE command usage
+delete from emp;
+Delete command is also used to remove rows from a table
+You can delete whether only particular records by using a condition with where a clause or entire rows can be deleted without using where class
+After performing delete operation the transactions can be rollbacked i.e that is a table can be restored after deleting 
+To make the changes permanent in a delete operation need to commit the transaction commit or rollback
+
+
+
+
+
+
